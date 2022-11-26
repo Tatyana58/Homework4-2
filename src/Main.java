@@ -53,9 +53,9 @@ public class Main {
         int birthRate=numberPopulation/1000*17;
         int mortality=numberPopulation/1000*8;
         int year=2022; //сегодня год
-        System.out.println("Год "+year+" численность населения составляет "+numberPopulation);
-        for (int z=1 ;z < 10;z++){
-           year=year+1;
+        //System.out.println("Год "+year+" численность населения составляет "+numberPopulation);
+        for (int z=1 ;z <=10;z++){
+           year++;
            numberPopulation=numberPopulation+birthRate-mortality;
         System.out.println("Год "+year+" численность населения составляет "+numberPopulation);
         }
