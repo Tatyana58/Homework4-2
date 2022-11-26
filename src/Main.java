@@ -1,3 +1,5 @@
+import java.io.PrintStream;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Циклы 2");
@@ -37,6 +39,25 @@ public class Main {
         System.out.println(" ");
         for (;y>=1;y--){
             System.out.print(y+" ");
+        }
+        System.out.println("");
+
+        System.out.println("Задание 3.");
+        //Задание 3
+        //В стране Y население равно 12 миллионам человек.
+        //За год рождаемость составляет 17 человек на 1000 человек, смертность - 8 человек.
+        //Рассчитайте, какая численность населения будет через 10 лет, принимая во внимание,
+        //что показатели рождаемости и смертности постоянны.
+        //В консоль выведите результат операции на каждый год в формате "Год …, численность населения составляет … "
+        int numberPopulation=12_000_000;
+        int birthRate=numberPopulation/1000*17;
+        int mortality=numberPopulation/1000*8;
+        int year=2022; //сегодня год
+        System.out.println("Год "+year+" численность населения составляет "+numberPopulation);
+        for (int z=1 ;z < 10;z++){
+           year=year+1;
+           numberPopulation=numberPopulation+birthRate-mortality;
+        System.out.println("Год "+year+" численность населения составляет "+numberPopulation);
         }
     }
 }
