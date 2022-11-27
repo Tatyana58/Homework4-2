@@ -128,16 +128,14 @@ public class Main {
         Date date = new Date();
         // Вывод текущей даты и времени с использованием toString()
         String str = String.format("Текущая дата и время: %tc ", date);
-
-
-
         Date date4 = new Date();
-
         // Вывод текущей даты с использованием toString()
         System.out.printf("%1$s %2$td %2$tB %2$tY", "Дата: ", date4);
         System.out.printf(str);
         //System.out.println("Сегодня пятница,... число. Необходимо подготовить отчет.");
         System.out.println("");
+
+
 
         System.out.println("Домашняя работа 3. Задание 1.");
         //6. Задание
@@ -161,6 +159,25 @@ public class Main {
             if (y6>(yearNew-year200)&&y6<(yearNew+year100)){
                 System.out.println((y6));
             }
+        }
+        System.out.println("");
+
+        System.out.println("Задание 2.");
+        //Задание 2
+        //Напишите программу, которая выводит в консоль таблицу умножения на 2:
+        //2*1=2
+        //2*2=4
+        //2*3=6
+        //2*4=8
+        //2*5=10
+        //2*6=12
+        //2*7=14
+        //2*8=16
+        //2*9=18
+        //2*10=20
+        int tableTwo=2;
+        for (int i7=1;i7<=10;i7++){
+            System.out.println(tableTwo+"*"+i7+"="+tableTwo*i7);
         }
 
     }
