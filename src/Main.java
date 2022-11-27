@@ -1,8 +1,5 @@
-import java.util.Date;
-
 public class Main {
-    public static void main(String[] args ) {
-        System.out.println("Циклы 2");
+    public static void main(String[] args){System.out.println("Циклы 2");
         System.out.println("Домашняя работа 1. Задание 1.");
         //2. Задание
         //Домашнее задание - 1
@@ -20,7 +17,7 @@ public class Main {
             savings = savings + salaryMonth;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + savings + " рублей");
         }
-        System.out.println("");
+        System.out.println(" ");
 
         System.out.println("Задание 2.");
         //Задание 2
@@ -41,7 +38,8 @@ public class Main {
         for (; y >= 1; y--) {
             System.out.print(y + " ");
         }
-        System.out.println("");
+        System.out.println(" ");
+        System.out.println(" ");
 
         System.out.println("Задание 3.");
         //Задание 3
@@ -60,7 +58,7 @@ public class Main {
             numberPopulation = numberPopulation + birthRate - mortality;
             System.out.println("Год " + year + " численность населения составляет " + numberPopulation);
         }
-        System.out.println("");
+        System.out.println(" ");
 
         System.out.println("Домашняя работа 2. Задание 1.");
         //4. Задание
@@ -74,26 +72,26 @@ public class Main {
         // чтобы собрать сумму в 12 миллионов рублей при условии, что процент банка от накоплений не меняется,
         // и всегда равен 7%. Выведите в консоль результат программы с указанием суммы накоплений по каждому месяцу.
         int salaryMonth2 = 15000;
-        int savings2 = 0;
-        for (int k = 1; savings2 <= 12_000_000; k++) {
-            savings2 = savings2 + salaryMonth2 + (savings2 + salaryMonth2) * 7 / 100;
-            System.out.println("Месяц " + k + ", сумма накоплений равна " + savings2 + " рублей");
+        int k=0;
+        while (salaryMonth2 < 12_000_000) {
+            k++;
+            salaryMonth2+= salaryMonth2* 7 / 100;
+            System.out.println("Месяц " + k + ", сумма накоплений равна " + salaryMonth2 + " рублей");
         }
-        System.out.println("");
+        System.out.println(" ");
 
         System.out.println("Задание 2.");
         //Задание 2
         //Видоизмените программу таким образом, чтобы в консоль выводились не все месяцы подряд,
         // а только каждый шестой. Должны быть видны накопления за 6, 12, 18, 24 и далее месяцы.
         int salaryMonth3 = 15000;
-        int savings3 = 0;
-        for (int j = 1; savings3 <= 12_000_000; j++) {
-            savings3 = savings3 + salaryMonth3 + (savings3 + salaryMonth3) * 7 / 100;
+        for (int j=1;salaryMonth3 <= 12_000_000;j++) {
+            salaryMonth3 += salaryMonth3 * 7 / 100;
             if (j % 6 == 0) {
-                System.out.println("Месяц " + j + ", сумма накоплений равна " + savings3 + " рублей");
+                System.out.println("Месяц " + j + ", сумма накоплений равна " + salaryMonth3 + " рублей");
             }
         }
-        System.out.println("");
+        System.out.println(" ");
 
         System.out.println("Задание 3.");
         //Задание 3
@@ -102,14 +100,13 @@ public class Main {
         //Исходная сумма всё так же 15 тысяч рублей, проценты банка – 7% ежемесячно.
         //Напишите программу, которая будет выводить Василию сумму его накоплений за следующие каждые полгода в течение 9 лет.
         int salaryMonth4 = 15000;
-        int savings4 = 0;
         for (int m = 1; m <= 108; m++) {
-            savings4 = savings4 + salaryMonth4 + (savings4 + salaryMonth4) * 7 / 100;
+            salaryMonth4 += salaryMonth4 * 7 / 100;
             if (m % 6 == 0) {
-                System.out.println("Месяц " + m + ", сумма накоплений равна " + savings4 + " рублей");
+                System.out.println("Месяц " + m + ", сумма накоплений равна " + salaryMonth4 + " рублей");
             }
         }
-        System.out.println("");
+        System.out.println(" ");
 
         System.out.println("Задание 4.");
         //Задание 4
@@ -121,20 +118,12 @@ public class Main {
         //Выведите на каждую пятницу месяца (включая полученную) сообщение следующего вида:
         //"Сегодня пятница, ...-е число. Необходимо подготовить отчет."
         //В нашем месяце 31 день. В результате у вас должно вывестись от 4 до 5 сообщений с напоминаниями по разным датам.
-        String deyWeek="пятница";
-        i=1; //первая пятница
-
-        // Инициализация объекта date
-        Date date = new Date();
-        // Вывод текущей даты и времени с использованием toString()
-        String str = String.format("Текущая дата и время: %tc ", date);
-        Date date4 = new Date();
-        // Вывод текущей даты с использованием toString()
-        System.out.printf("%1$s %2$td %2$tB %2$tY", "Дата: ", date4);
-        System.out.printf(str);
-        //System.out.println("Сегодня пятница,... число. Необходимо подготовить отчет.");
-        System.out.println("");
-
+        int friday=5;
+        int day=friday;
+        for(;day<=31;day+=7) {
+            System.out.println("Сегодня пятница," + day + "-е число. Необходимо подготовить отчет.");
+        }
+        System.out.println(" ");
 
 
         System.out.println("Домашняя работа 3. Задание 1.");
@@ -152,11 +141,11 @@ public class Main {
         //1896
         //1975
         //2054
-        int yearNew=2022;
-        int year200=200;
-        int year100=100;
-        for (int y6=0;y6<yearNew+year100;y6+=79){
-            if (y6>(yearNew-year200)&&y6<(yearNew+year100)){
+        int yearNew = 2022;
+        int year200 = 200;
+        int year100 = 100;
+        for (int y6 = 0; y6 < yearNew + year100; y6 += 79) {
+            if (y6 > (yearNew - year200) && y6 < (yearNew + year100)) {
                 System.out.println((y6));
             }
         }
@@ -175,10 +164,9 @@ public class Main {
         //2*8=16
         //2*9=18
         //2*10=20
-        int tableTwo=2;
-        for (int i7=1;i7<=10;i7++){
-            System.out.println(tableTwo+"*"+i7+"="+tableTwo*i7);
+        int tableTwo = 2;
+        for (int i7 = 1; i7 <= 10; i7++) {
+            System.out.println(tableTwo + "*" + i7 + "=" + tableTwo * i7);
         }
-
     }
 }
